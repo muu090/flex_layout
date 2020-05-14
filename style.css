@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  padding: 30px 20px;
+  justify-content: flex-end; /*Flexアイテムを全て右へ寄せる*/
+  background-color: purple;
+}
+
+header > div {
+  flex-basis: 140px;  /*Flexアイテムの横幅を指定*/
+  height: 70px;
+  margin: 0 10px;
+  background-color: plum;
+}
+
+header > :first-child {
+  margin-right: auto; 
+  /*justify-content: flex-end;に組み合わせると設定したアイテムの右側に自動的に余白を作ることができる*/
+}
+
+.main {
+  display: flex;
+  justify-content:center;
+}
+
+.main-left {
+  width: 300px;
+  background-color: greenyellow;
+}
+
+.main-right {
+  display: flex;
+  padding: 20px;
+  max-width: 700px;
+  flex-grow: 1;
+  flex-wrap: wrap; /*Flexコンテナーの内容の横幅の合計値が、Flexコンテナー自体の横幅を超過する場合の折り返し*/
+  justify-content: center; /*Flexアイテムを中央寄せ*/
+  background-color: green;
+}
+
+.main-right  > div {
+  margin: 10px;
+  height: 130px;
+  flex-basis: 200px;
+  background-color:yellow;
+}
+
+footer {
+  display: flex;
+  padding: 20px;
+  flex-wrap: wrap; /*Flexコンテナーの内容の横幅の合計値が、Flexコンテナー自体の横幅を超過する場合の折り返し*/
+  justify-content: center; 
+  background-color: blue;
+}
+
+footer > div {
+  margin: 10px;
+  height: 40px;
+  flex-basis: 45%;
+  max-width: 600px;
+  background-color: cadetblue;
+}
